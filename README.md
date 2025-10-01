@@ -27,13 +27,9 @@ Authentication Support – Secure login for personalized resume history.
 
 🔄 React Router (SPA mode enabled)
 
-### Backend & Infra
-
-⚡ Node.js + Express
+### Infra
 
 ☁️ Puter (cloud storage, key-value store, AI feedback API)
-
-🐳 Docker (for containerization)
 
 ### Others
 
