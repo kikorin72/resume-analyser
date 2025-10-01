@@ -1,87 +1,109 @@
-# Welcome to React Router!
+# 📄 Resume Analyser
 
-A modern, production-ready template for building full-stack React applications using React Router.
+An AI-powered resume analysis web application that helps candidates optimize their resumes for ATS systems and tech job applications.
+Built with React.js + Tailwind CSS on the frontend and powered by Puter’s cloud storage, AI feedback engine, and key-value store for smart resume processing.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🚀 Features
 
-## Features
+Resume Upload & Parsing – Supports PDF → Image conversion for better text extraction.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+ATS Compatibility Analysis – Highlights missing keywords & formatting issues.
 
-## Getting Started
+AI-Powered Feedback – Uses Puter’s AI infra to provide personalized resume improvement tips.
 
-### Installation
+Cloud Storage Integration – Store and manage resumes securely with Puter.
 
-Install the dependencies:
+Interactive Dashboard – View Resume Cards, Scorecards, and Feedback Reports in a modern UI.
+
+Authentication Support – Secure login for personalized resume history.
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+⚛️ React.js
+
+🎨 Tailwind CSS
+
+🔄 React Router (SPA mode enabled)
+
+### Backend & Infra
+
+⚡ Node.js + Express
+
+☁️ Puter (cloud storage, key-value store, AI feedback API)
+
+🐳 Docker (for containerization)
+
+### Others
+
+PDF/Image Conversion libraries
+
+TypeScript (strong typing & better dev experience)
+
+📂 Project Structure
+resume-analyser/
+│── app/               # Core application logic
+│── constants/         # Cloud storage, AI feedback, config values
+│── public/            # Static files (ResumeCard, Scorecard, etc.)
+│── types/             # TypeScript type definitions
+│── Dockerfile         # Container setup
+│── vite.config.ts     # Vite build config
+│── react-router.config.ts  # SPA routing config
+│── tsconfig.json      # TypeScript configuration
+
+## 🧑‍💻 How It Works
+
+Upload your resume (PDF/DOCX).
+
+File is stored & processed via Puter cloud storage.
+
+Resume is parsed → converted to text → analyzed using AI feedback engine.
+
+A Resume Card + Scorecard is generated showing:
+
+Missing keywords
+
+Formatting issues
+
+Skill gap analysis
+
+Overall resume score
+
+Users can log in & save their resume history securely.
+
+## ⚙️ Installation & Setup
+## ⚙️ Installation & Setup  
 
 ```bash
+# Clone the repository
+git clone https://github.com/kikorin72/resume-analyser.git
+
+# Navigate into project
+cd resume-analyser
+
+# Install dependencies
 npm install
-```
 
-### Development
-
-Start the development server with HMR:
-
-```bash
+# Run dev server
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+## 💡 Future Roadmap
 
-## Building for Production
+🔍 Job-specific resume tailoring (upload JD → compare with resume)
 
-Create a production build:
+📊 Advanced data visualizations of skills & ATS scores
 
-```bash
-npm run build
-```
+🌐 Multi-language support
 
-## Deployment
+☁️ Resume version history (cloud sync with Puter)
 
-### Docker Deployment
+## 👩‍💻 Author
 
-To build and run using Docker:
+Kriti Gupta : 
+Frontend Developer | AI + Web3 Enthusiast | Resume Tools Builder
 
-```bash
-docker build -t my-app .
+[LinkedIn](https://www.linkedin.com/in/kritigupta45/)
+[Portfolio](https://your-portfolio-link.com)
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
